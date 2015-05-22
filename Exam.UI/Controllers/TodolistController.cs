@@ -6,6 +6,9 @@ using Exam.UI.ViewModels.Objs;
 
 namespace Exam.UI.Controllers
 {
+    /// <summary>
+    /// Контроллер списка задач
+    /// </summary>
     [Authorize]
     public class TodolistController : BaseController
     {
@@ -18,6 +21,10 @@ namespace Exam.UI.Controllers
             _authService = authService;
         }
 
+        /// <summary>
+        /// Отобразить список для пользователя
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ViewResult Index()
         {
@@ -26,6 +33,11 @@ namespace Exam.UI.Controllers
             return View(_todolistService.List(user.Id));
         }
 
+        /// <summary>
+        /// Отметить задачу выполненой
+        /// </summary>
+        /// <param name="id">Идентификатор задачи</param>
+        /// <returns></returns>
         [HttpGet]
         public bool Achieved(Guid id)
         {
@@ -33,6 +45,12 @@ namespace Exam.UI.Controllers
             return true;
         }
 
+        /// <summary>
+        /// Добавить задачу
+        /// </summary>
+        /// <param name="topic">Наименование задачи</param>
+        /// <param name="text">Описание</param>
+        /// <returns></returns>
         [HttpPost]
         public PartialViewResult Add(string topic, string text)
         {

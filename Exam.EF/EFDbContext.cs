@@ -7,6 +7,9 @@ using Exam.DAL.Contracts;
 
 namespace Exam.EF
 {
+    /// <summary>
+    /// Контекст БД
+    /// </summary>
     public class EFDbContext : DbContext
     {
         public new IDbSet<TEntity> Set<TEntity>() 

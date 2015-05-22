@@ -7,6 +7,9 @@ using Exam.UI.ViewModels;
 
 namespace Exam.UI.Controllers
 {
+    /// <summary>
+    /// Контроллер регистрации
+    /// </summary>
     public class RegistrationController: BaseController
     {
         private readonly IUnitOfWork _unit;
@@ -18,12 +21,21 @@ namespace Exam.UI.Controllers
             _authService = authService;
         }
 
+        /// <summary>
+        /// Отображает форму регистрации
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ViewResult Index()
         {
             return View(new RegistrationViewModel());
         }
 
+        /// <summary>
+        /// Регистрация пользователя
+        /// </summary>
+        /// <param name="registrationModel">Форма регистрации</param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult Index(RegistrationViewModel registrationModel)
         {

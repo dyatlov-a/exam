@@ -15,34 +15,16 @@ namespace Exam.EF
             _context = context;
         }
 
-        public IQueryable<TEntity> Get<TEntity>(string includeProperties = "") 
+        public IQueryable<TEntity> Get<TEntity>() 
             where TEntity : Entity
         {
-            var query = _context.Set<TEntity>()
-                .AsQueryable();
-
-            foreach (var includeProperty in includeProperties.Split(new char[] { ',' },
-                StringSplitOptions.RemoveEmptyEntries))
-            {
-                query = query.Include(includeProperty);
-            }
-
-            return query;
+            return _context.Set<TEntity>();
         }
 
-        public TEntity GetById<TEntity>(Guid id, string includeProperties = "") 
+        public TEntity GetById<TEntity>(Guid id) 
             where TEntity : Entity
         {
-            var query = _context.Set<TEntity>()
-                .AsQueryable();
-
-            foreach (var includeProperty in includeProperties.Split(new char[] { ',' },
-                StringSplitOptions.RemoveEmptyEntries))
-            {
-                query = query.Include(includeProperty);
-            }
-
-            return query.FirstOrDefault(d => d.Id == id);
+            return _context.Set<TEntity>().Find(id);
         }
 
         public void InsertOrUpdate<TEntity>(TEntity obj) 

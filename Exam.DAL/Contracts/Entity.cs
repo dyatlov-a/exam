@@ -2,7 +2,10 @@
 
 namespace Exam.DAL.Contracts
 {
-    public abstract class Entity : IEntity
+    /// <summary>
+    /// Базовый тип сущности, для работы с БД
+    /// </summary>
+    public abstract class Entity
     {
         public Guid Id { get; set; }
 

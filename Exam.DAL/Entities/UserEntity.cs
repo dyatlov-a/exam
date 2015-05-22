@@ -3,6 +3,9 @@ using Exam.DAL.Contracts;
 
 namespace Exam.DAL.Entities
 {
+    /// <summary>
+    /// Пользователь
+    /// </summary>
     public class UserEntity : Entity
     {      
         public string Name { get; set; }

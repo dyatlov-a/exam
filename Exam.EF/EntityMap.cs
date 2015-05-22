@@ -6,6 +6,11 @@ namespace Exam.EF
     public class EntityMap<TEntity> : EntityTypeConfiguration<TEntity>
         where TEntity : Entity
     {
+        /// <summary>
+        /// Базовый мапер
+        /// </summary>
+        /// <param name="tableName">Название таблицы в БД</param>
+        /// <param name="prefix">Префикс полей в БД</param>
         public EntityMap(string tableName, string prefix)
         {
             ToTable(tableName);

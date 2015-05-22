@@ -2,6 +2,9 @@
 
 namespace Exam.EF.Mappers
 {
+    /// <summary>
+    /// Проекция на БД типа - задача
+    /// </summary>
     public class TaskEntityMap : EntityMap<TaskEntity>
     {
         public TaskEntityMap()

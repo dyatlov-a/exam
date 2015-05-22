@@ -2,6 +2,9 @@
 
 namespace Exam.EF.Mappers
 {
+    /// <summary>
+    /// Проекция на БД типа - пользователь
+    /// </summary>
     public class UserEntityMap : EntityMap<UserEntity>
     {
         public UserEntityMap()

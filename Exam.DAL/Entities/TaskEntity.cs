@@ -3,6 +3,9 @@ using Exam.DAL.Contracts;
 
 namespace Exam.DAL.Entities
 {
+    /// <summary>
+    /// Задание (в списке задач)
+    /// </summary>
     public class TaskEntity : Entity
     {
         public string Topic { get; set; }

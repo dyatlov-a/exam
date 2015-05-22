@@ -5,6 +5,10 @@ namespace Exam.UI
 {
     public class RouteConfig
     {
+        /// <summary>
+        /// Регистрирует маршруты
+        /// </summary>
+        /// <param name="routes"></param>
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");

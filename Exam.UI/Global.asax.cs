@@ -10,7 +10,10 @@ namespace Exam.UI
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            // оставляем только движок Razor
             vEngine.Init();
+            // иверсия зависимостей Autofac
             IoC.Init();
         }
     }

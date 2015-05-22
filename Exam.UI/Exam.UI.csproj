@@ -95,6 +95,80 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="less\libs\bootstrap\.csscomb.json" />
+    <Content Include="less\libs\bootstrap\.csslintrc" />
+    <Content Include="less\libs\bootstrap\alerts.less" />
+    <Content Include="less\libs\bootstrap\badges.less" />
+    <Content Include="less\libs\bootstrap\bootstrap.less" />
+    <Content Include="less\libs\bootstrap\breadcrumbs.less" />
+    <Content Include="less\libs\bootstrap\button-groups.less" />
+    <Content Include="less\libs\bootstrap\buttons.less" />
+    <Content Include="less\libs\bootstrap\carousel.less" />
+    <Content Include="less\libs\bootstrap\close.less" />
+    <Content Include="less\libs\bootstrap\code.less" />
+    <Content Include="less\libs\bootstrap\component-animations.less" />
+    <Content Include="less\libs\bootstrap\dropdowns.less" />
+    <Content Include="less\libs\bootstrap\forms.less" />
+    <Content Include="less\libs\bootstrap\glyphicons.less" />
+    <Content Include="less\libs\bootstrap\grid.less" />
+    <Content Include="less\libs\bootstrap\input-groups.less" />
+    <Content Include="less\libs\bootstrap\jumbotron.less" />
+    <Content Include="less\libs\bootstrap\labels.less" />
+    <Content Include="less\libs\bootstrap\list-group.less" />
+    <Content Include="less\libs\bootstrap\media.less" />
+    <Content Include="less\libs\bootstrap\mixins.less" />
+    <Content Include="less\libs\bootstrap\mixins\alerts.less" />
+    <Content Include="less\libs\bootstrap\mixins\background-variant.less" />
+    <Content Include="less\libs\bootstrap\mixins\border-radius.less" />
+    <Content Include="less\libs\bootstrap\mixins\buttons.less" />
+    <Content Include="less\libs\bootstrap\mixins\center-block.less" />
+    <Content Include="less\libs\bootstrap\mixins\clearfix.less" />
+    <Content Include="less\libs\bootstrap\mixins\forms.less" />
+    <Content Include="less\libs\bootstrap\mixins\gradients.less" />
+    <Content Include="less\libs\bootstrap\mixins\grid-framework.less" />
+    <Content Include="less\libs\bootstrap\mixins\grid.less" />
+    <Content Include="less\libs\bootstrap\mixins\hide-text.less" />
+    <Content Include="less\libs\bootstrap\mixins\image.less" />
+    <Content Include="less\libs\bootstrap\mixins\labels.less" />
+    <Content Include="less\libs\bootstrap\mixins\list-group.less" />
+    <Content Include="less\libs\bootstrap\mixins\nav-divider.less" />
+    <Content Include="less\libs\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="less\libs\bootstrap\mixins\opacity.less" />
+    <Content Include="less\libs\bootstrap\mixins\pagination.less" />
+    <Content Include="less\libs\bootstrap\mixins\panels.less" />
+    <Content Include="less\libs\bootstrap\mixins\progress-bar.less" />
+    <Content Include="less\libs\bootstrap\mixins\reset-filter.less" />
+    <Content Include="less\libs\bootstrap\mixins\resize.less" />
+    <Content Include="less\libs\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="less\libs\bootstrap\mixins\size.less" />
+    <Content Include="less\libs\bootstrap\mixins\tab-focus.less" />
+    <Content Include="less\libs\bootstrap\mixins\table-row.less" />
+    <Content Include="less\libs\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="less\libs\bootstrap\mixins\text-overflow.less" />
+    <Content Include="less\libs\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="less\libs\bootstrap\modals.less" />
+    <Content Include="less\libs\bootstrap\navbar.less" />
+    <Content Include="less\libs\bootstrap\navs.less" />
+    <Content Include="less\libs\bootstrap\normalize.less" />
+    <Content Include="less\libs\bootstrap\pager.less" />
+    <Content Include="less\libs\bootstrap\pagination.less" />
+    <Content Include="less\libs\bootstrap\panels.less" />
+    <Content Include="less\libs\bootstrap\popovers.less" />
+    <Content Include="less\libs\bootstrap\print.less" />
+    <Content Include="less\libs\bootstrap\progress-bars.less" />
+    <Content Include="less\libs\bootstrap\responsive-embed.less" />
+    <Content Include="less\libs\bootstrap\responsive-utilities.less" />
+    <Content Include="less\libs\bootstrap\scaffolding.less" />
+    <Content Include="less\libs\bootstrap\tables.less" />
+    <Content Include="less\libs\bootstrap\theme.less" />
+    <Content Include="less\libs\bootstrap\thumbnails.less" />
+    <Content Include="less\libs\bootstrap\tooltip.less" />
+    <Content Include="less\libs\bootstrap\type.less" />
+    <Content Include="less\libs\bootstrap\utilities.less" />
+    <Content Include="less\libs\bootstrap\variables.less" />
+    <Content Include="less\libs\bootstrap\wells.less" />
+    <Content Include="less\UI\_main.less" />
+    <Content Include="less\UI\wrapper.less" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -103,6 +177,14 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="src\gulpfile.js" />
+    <Content Include="src\libs\bootstrap\bootstrap.js" />
+    <Content Include="src\libs\jquery\jquery-1.11.3.js" />
+    <Content Include="src\UI\_activedTask.js" />
+    <Content Include="src\UI\_addTask.js" />
+    <Content Include="src\UI\_main.js" />
+    <Content Include="static\_main.css" />
+    <Content Include="static\_main.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -110,22 +192,41 @@
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
-    <Compile Include="Controllers\ToDoController.cs" />
+    <Compile Include="Controllers\TodolistController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\BaseController.cs" />
     <Compile Include="Infrastructure\IoC.cs" />
     <Compile Include="Infrastructure\Services\Default\DefaultAuthService.cs" />
-    <Compile Include="Infrastructure\Services\Default\DefaultToDoService.cs" />
+    <Compile Include="Infrastructure\Services\Default\DefaultTodolistService.cs" />
     <Compile Include="Infrastructure\Services\IAuthService.cs" />
-    <Compile Include="Infrastructure\Services\IToDoService.cs" />
+    <Compile Include="Infrastructure\Services\ITodolistService.cs" />
     <Compile Include="Infrastructure\vEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\Objs\ActiveViewModel.cs" />
+    <Compile Include="Resourses\ButtonsRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ButtonsRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resourses\ErrorsRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorsRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resourses\LabelsRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LabelsRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resourses\ViewsRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewsRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Objs\TaskViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\RegistrationViewModel.cs" />
-    <Compile Include="ViewModels\Objs\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -134,6 +235,14 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="src\package.json" />
+    <Content Include="Views\Registration\Index.cshtml" />
+    <Content Include="Views\Auth\Index.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\LoginViewModel.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\RegistrationViewModel.cshtml" />
+    <Content Include="Views\Todolist\Index.cshtml" />
+    <Content Include="Views\Shared\_taskDetails.cshtml" />
+    <Content Include="Views\Shared\_addTask.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -143,11 +252,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="less\" />
     <Folder Include="Models\" />
-    <Folder Include="Resourses\" />
-    <Folder Include="src\" />
-    <Folder Include="static\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Exam.DAL\Exam.DAL.csproj">
@@ -158,6 +263,24 @@
       <Project>{f04ee711-b045-4de8-9947-b8ebec00ee73}</Project>
       <Name>Exam.EF</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resourses\ButtonsRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ButtonsRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resourses\ErrorsRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorsRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resourses\LabelsRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LabelsRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resourses\ViewsRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ViewsRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

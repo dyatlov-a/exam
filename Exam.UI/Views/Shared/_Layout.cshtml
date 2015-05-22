@@ -1,13 +1,60 @@
 ﻿<!DOCTYPE html>
 
 <html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-</head>
-<body>
-    <div>
-         @RenderBody()
-    </div>
-</body>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        <link href="~/static/_main.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav class="navbar navbar-static-top navbar-inverse" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>  
+                            <span class="icon-bar"></span>  
+                            <span class="icon-bar"></span>
+                        </button>
+                        
+                        <a class="navbar-brand" href="@Url.Action("Index", "Home")">@ViewsRes.BrandTodolist</a>
+                    </div>
+                    
+                    <div class="navbar-collapse collapse">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <ul class="nav navbar-nav">
+                                <li><a href="@Url.Action("Index", "Todolist")">@ViewsRes.Todolist</a></li>
+                            </ul>
+                            
+                            <ul class="nav navbar-nav navbar-right">
+                                <li></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">@User.Identity.Name<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="@Url.Action("Logout", "Auth")">@ViewsRes.LogOut</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        }
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+            <div class="footer-con"></div>
+        </div>
+        <div class="footer">
+            <span class="footer-text">@ViewsRes.BrandTodolist</span>
+        </div>
+        
+        <script src="~/static/_main.js"></script>
+    </body>
 </html>

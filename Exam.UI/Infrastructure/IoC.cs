@@ -16,6 +16,8 @@ namespace Exam.UI.Infrastructure
         {
             var builder = ServicesRegiser(new ContainerBuilder());
 
+            builder.RegisterControllers(typeof(MvcApplication).Assembly);
+
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
         }
@@ -32,7 +34,9 @@ namespace Exam.UI.Infrastructure
             builder.RegisterType<Repository>().As<IRepository>()
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<DefaultToDoService>().As<IToDoService>()
+            builder.RegisterType<DefaultAuthService>().As<IAuthService>()
+                .InstancePerLifetimeScope();
+            builder.RegisterType<DefaultTodolistService>().As<ITodolistService>()
                 .InstancePerLifetimeScope();
 
             return builder;

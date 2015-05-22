@@ -50,7 +50,7 @@
   <ItemGroup>
     <Compile Include="EFDbContext.cs" />
     <Compile Include="EntityMap.cs" />
-    <Compile Include="Mappers\ActiveEntityMap.cs" />
+    <Compile Include="Mappers\TaskEntityMap.cs" />
     <Compile Include="Mappers\UserEntityMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />

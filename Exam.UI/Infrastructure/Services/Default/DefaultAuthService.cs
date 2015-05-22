@@ -79,7 +79,7 @@ namespace Exam.UI.Infrastructure.Services.Default
                 .FirstOrDefault(d => d.Name == userName);
         }
 
-        public UserEntity CreateUser(string userName, string password, string passwordHash, string passwordSalt)
+        public UserEntity CreateUser(string userName, string passwordHash, string passwordSalt)
         {
             var user = new UserEntity
             {

@@ -1,0 +1,12 @@
+﻿@model Exam.UI.ViewModels.RegistrationViewModel
+
+<div class="form-group">
+    @Html.LabelFor(m => m.UserName, LabelsRes.UserName)
+    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.UserName)
+</div>
+<div class="form-group">
+    @Html.LabelFor(m => m.Password, LabelsRes.Password)
+    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Password)
+</div>

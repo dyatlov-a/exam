@@ -33,11 +33,11 @@ gulp.task('mainless', function () {
 });
 
 gulp.task('watchless', function () {
-    gulp.watch(['../less/UI/*.less'], ['clientless']);
+    gulp.watch(['../less/UI/*.less'], ['mainless']);
 });
 
 gulp.task('server', function () {
     connect.server();
 });
 
-gulp.task('default', ['mainjs', 'mainless', 'watchjs', 'server']);
+gulp.task('default', ['mainjs', 'mainless', 'watchjs', 'watchless', 'server']);

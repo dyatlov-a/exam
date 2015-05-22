@@ -16,8 +16,13 @@ namespace Exam.DAL.Contracts
 
         public DateTime Created { get; set; }
 
-        public DateTime Modified { get; set; }
+        public DateTime? Modified { get; set; }
 
         public bool IsSave { get; set; }
+
+        public Entity()
+        {
+            Id = Guid.NewGuid();
+        }
     }
 }

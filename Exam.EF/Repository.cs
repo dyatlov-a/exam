@@ -52,6 +52,7 @@ namespace Exam.EF
 
             if (!obj.IsSave)
             {
+                obj.IsSave = true;
                 obj.Created = date;
 
                 _context.Set<TEntity>()

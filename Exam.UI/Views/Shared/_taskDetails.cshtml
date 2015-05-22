@@ -1,0 +1,12 @@
+﻿@model Exam.UI.ViewModels.Objs.TaskViewModel
+
+<div class="row">
+    <div class="col-sm-12">
+        <button data-url="@Url.Action("Achieved", "Todolist", new { Model.Id })" class="pull-right btn btn-primary">
+            @ButtonsRes.Achieved
+        </button>
+
+        <h2>@Model.Topic</h2>
+        <p>@Model.Text</p>
+    </div>
+</div>

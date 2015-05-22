@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Exam.UI.ViewModels.Objs.TaskViewModel>
+
+@{
+    ViewBag.Title = ViewsRes.TodolistTitle;
+}
+
+<div class="row">
+    <div class="col-sm-7">
+        <h1>@string.Format(ViewsRes.TodolistH1, User.Identity.Name)</h1>
+        
+        <div id="todolist">
+            @foreach (var active in Model)
+            {
+                @Html.Partial("_taskDetails", active)
+            }
+        </div>
+    </div>
+    <div class="col-sm-5">
+        @Html.Partial("_addTask")
+    </div>
+</div>

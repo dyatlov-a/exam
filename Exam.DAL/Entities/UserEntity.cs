@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Exam.DAL.Contracts;
 
 namespace Exam.DAL.Entities
@@ -12,7 +11,7 @@ namespace Exam.DAL.Entities
 
         public string PasswordSalt { get; set; }
 
-        public ICollection<ActiveEntity> ActiveList { get; set; }
+        public virtual ICollection<TaskEntity> ActiveList { get; set; }
 
         public override string DisplayName
         {
@@ -21,8 +20,7 @@ namespace Exam.DAL.Entities
 
         public UserEntity()
         {
-            Id = Guid.NewGuid();
-            ActiveList = new List<ActiveEntity>();
+            ActiveList = new List<TaskEntity>();
         }
     }
 }

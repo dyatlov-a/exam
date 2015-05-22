@@ -1,1 +1,14 @@
-﻿
+﻿@{
+    ViewBag.Title = ViewsRes.MainTitle;
+}
+
+<div>
+    <div class="jumbotron">
+        <h1>@ViewsRes.MainTopic</h1>
+        <p>@ViewsRes.MainAbout</p>
+        <p id="main-btn">
+            <a class="btn btn-primary btn-lg" href="@Url.Action("Index", "Auth")" role="button">@ViewsRes.MainLogin</a>
+            <a class="btn btn-success btn-lg" href="@Url.Action("Index", "Registration")" role="button">@ViewsRes.MainReg</a>
+        </p>
+    </div>
+</div>

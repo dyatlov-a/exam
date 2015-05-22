@@ -2,7 +2,7 @@
 
 namespace Exam.UI.Infrastructure.Services
 {
-    interface IAuthService
+    public interface IAuthService
     {
         bool ValidateUser(string userName, string password);
 
@@ -12,6 +12,6 @@ namespace Exam.UI.Infrastructure.Services
 
         UserEntity GetUser(string userName);
 
-        UserEntity CreateUser(string userName, string password, string passwordHash, string passwordSalt);
+        UserEntity CreateUser(string userName, string passwordHash, string passwordSalt);
     }
 }

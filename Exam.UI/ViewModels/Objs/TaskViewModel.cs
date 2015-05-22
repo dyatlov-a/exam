@@ -1,21 +1,25 @@
-﻿using Exam.DAL.Entities;
+﻿using System;
+using Exam.DAL.Entities;
 
 namespace Exam.UI.ViewModels.Objs
 {
-    public class ActiveViewModel
+    public class TaskViewModel
     {
+        public Guid Id { get; set; }
+
         public string Topic { get; set; }
 
         public string Text { get; set; }
 
-        public ActiveViewModel()
+        public TaskViewModel()
         {
         }
 
-        public ActiveViewModel(ActiveEntity dbObj)
+        public TaskViewModel(TaskEntity dbObj)
         {
             if (dbObj != null)
             {
+                Id = dbObj.Id;
                 Topic = dbObj.Topic;
                 Text = dbObj.Text;
             }

@@ -9,6 +9,10 @@ namespace Exam.EF.Mappers
         {
             Property(x => x.Name)
                 .HasColumnName("usr_Name");
+            Property(x => x.Password)
+                .HasColumnName("usr_Password");
+            Property(x => x.PasswordSalt)
+                .HasColumnName("usr_PasswordSalt");
         }
     }
 }

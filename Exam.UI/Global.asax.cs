@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
+using Exam.UI.Infrastructure;
 
 namespace Exam.UI
 {
@@ -13,6 +10,8 @@ namespace Exam.UI
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            vEngine.Init();
+            IoC.Init();
         }
     }
 }

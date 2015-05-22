@@ -5,6 +5,8 @@ using Autofac;
 using Autofac.Integration.Mvc;
 using Exam.DAL;
 using Exam.EF;
+using Exam.UI.Infrastructure.Services;
+using Exam.UI.Infrastructure.Services.Default;
 
 namespace Exam.UI.Infrastructure
 {
@@ -25,11 +27,12 @@ namespace Exam.UI.Infrastructure
                 .WithParameter("connectionString",
                     ConfigurationManager.ConnectionStrings["defaultConnectionString"].ConnectionString)
                 .WithParameter("showSql", false);
-
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>()
                 .InstancePerLifetimeScope();
-
             builder.RegisterType<Repository>().As<IRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<DefaultToDoService>().As<IToDoService>()
                 .InstancePerLifetimeScope();
 
             return builder;

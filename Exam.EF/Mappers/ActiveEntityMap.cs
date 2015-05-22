@@ -11,6 +11,10 @@ namespace Exam.EF.Mappers
                 .HasColumnName("act_Topic");
             Property(x => x.Text)
                 .HasColumnName("act_Text");
+
+            HasRequired(x => x.User)
+                .WithMany(y => y.ActiveList)
+                .HasForeignKey(k => k.UserId);
         }
     }
 }

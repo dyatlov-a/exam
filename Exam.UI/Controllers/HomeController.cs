@@ -1,8 +1,9 @@
 ﻿using System.Web.Mvc;
+using Exam.UI.Infrastructure;
 
 namespace Exam.UI.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ViewResult Index()
         {

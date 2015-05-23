@@ -234,6 +234,7 @@
     <Content Include="Views\Todolist\Index.cshtml" />
     <Content Include="Views\Shared\_taskDetails.cshtml" />
     <Content Include="Views\Shared\_addTask.cshtml" />
+    <Content Include="less\UI\validation.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

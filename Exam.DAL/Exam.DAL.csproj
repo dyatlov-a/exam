@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\Entity.cs" />
-    <Compile Include="Contracts\IEntity.cs" />
     <Compile Include="Entities\TaskEntity.cs" />
     <Compile Include="Entities\UserEntity.cs" />
     <Compile Include="IRepository.cs" />
